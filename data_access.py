@@ -1,23 +1,22 @@
 import pandas as pd
 
 def get_age(df):
-    pass
+    return df["Age"]
 
 def get_third_name(df):
-    pass
+    return df.iloc[2]
 
 def get_carol_deets(df):
-    pass
+    return df.loc["Carol", :]
 
 def get_salary_and_occupation(df):
-    pass
+    return df[["Salary", "Occupation"]]
 
 def get_age_salary_of_first_two(df):
-    pass
+    return df.iloc[[0, 1]][["Age", "Salary"]]
 
 def get_occupation_bob_eve(df):
-    pass
-
+    return df.loc[["Bob", "Eve"], :]["Occupation"]
 
     
 
@@ -42,10 +41,6 @@ def main():
     
     print("****************")
     print(get_occupation_bob_eve(df))
-    
-    
-    
-    
     
 
 if __name__ == "__main__":
